@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dot Lookup</title>
+</head>
+<body>
+    <h2>Technically, when the template system encounters a dot, it tries the following lookups, in this order:</h2>
+    <h3>Dictionary lookup</h3>
+    <h3>Attribute or method lookup</h3>
+    <h3>Numeric index lookup</h3>
+    <h5>for loop tags </h5>
+    <ul>
+        {% for nm in name reversed %}
+            <li>{{ nm }}</li>
+        {% endfor %}
+    </ul>
+
+    {% for nm in name %}
+        {{ forloop.counter }} {{ nm }} <br>
+    {% endfor %}
+
+    {% for nm in name %}
+        {{ forloop.first }} {{ nm }} <br>
+    {% endfor %}
+
+    {% for nm in name %}
+        {{ forloop.last }} {{ nm }} <br>
+    {% endfor %}
+
+    {% for nm in name %}
+        {{ forloop.revcounter }} {{ nm }} <br>
+    {% endfor %}
+    {{ student }}
+    <h3>{{ student.stu1 }}</h3>
+    <h3>{{ student.stu1.name }}</h3>
+    <h3>{{ student.stu1.roll }}</h3>
+    <h5>{{ student.stu2.roll }}</h5>
+</body>
+</html>

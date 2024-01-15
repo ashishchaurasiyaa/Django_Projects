@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loops tags</title>
+</head>
+<body>
+    {% for key, value in dt.items %}
+        {{ key }} = {{ value }}
+    {% for key, value in dt.items %}
+        {% for k, v in value.items %}
+            {{ k }} = {{ v }}
+        {% endfor %}
+    {% endfor %}
+    {% endfor %}
+
+</body>
+</html>
