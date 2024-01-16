@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Hay {{ nm }}</h3>
+<img src="{% static 'images/image2.jpeg' %}">
+<img src="{% get_static_prefix %}images/image1.jpeg" alt="Django">
+</body>
+</html>
