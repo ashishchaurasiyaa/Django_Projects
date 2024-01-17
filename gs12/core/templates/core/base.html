@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Other{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Django Course</li>
+        </ul>
+    </nav>
+
+    {% block content %} {% endblock content %}
+
+</body>
+</html>
