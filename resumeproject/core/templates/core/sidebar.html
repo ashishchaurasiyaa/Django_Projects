@@ -1,0 +1,18 @@
+{% load static %}
+
+<div class="border-right border-warning h-100">
+    <div class="text-center">
+        <img src="{% static 'core/images/unnamed.png' %}" alt="ProfilePic" class="img-fluid rounded-circle mt-4"
+             width="100px" height="100px">
+        <h3 class="text-white mt-3 st-font">Ashish Chaurasiya</h3>
+    </div>
+    <hr class="border-light">
+
+    <nav class="nav flex-column text-center">
+        <a href="{% url 'home' %}" class="nav-link">Home</a>
+        <a href="{% url 'serv:services/' %}" class="nav-link">Services</a>
+        <a href="{% url 'edu:skills/' %}" class="nav-link">Skills</a>
+        <a href="{% url 'contact/' %}" class="nav-link">Contact</a>
+
+    </nav>
+</div>
