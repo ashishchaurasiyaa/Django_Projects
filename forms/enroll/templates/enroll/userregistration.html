@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+{#<form action="" method="get">#}
+{#    <table>#}
+{#        {{ form.as_p }}#}
+{#    </table>#}
+{#    <input type="submit" value="Submit">#}
+{#</form>#}
+
+<form action="" method="get">
+    {% for field in form.visible_fields %}
+        {{ field.label_tag }}
+        {{ field }}
+    {% endfor %}
+    {% for hidden in form.hidden_fields %}
+        {{ hidden }}
+    {% endfor %}
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
