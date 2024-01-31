@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Middleware Project</title>
+    <link rel="stylesheet" href="{% static 'mysite/css/bootstrap.css' %}">
+</head>
+<body class="bg-gradient">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">MySite</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Course
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Python</a></li>
+                        <li><a class="dropdown-item" href="#">Django</a></li>
+                        <li><a class="dropdown-item" href="#">DRF</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}
+
+    {% endblock content %}
+
+<script src="{% static 'mysite/js/jquery.js' %}"></script>
+<script src="{% static 'mysite/js/popper.js' %}"></script>
+<script src="{% static 'mysite/js/bootstrap.js' %}"></script>
+</body>
+</html>
