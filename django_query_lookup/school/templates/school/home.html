@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Django Lookup</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        h3 {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+<h3>Student Information</h3>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Marks</th>
+        <th>City</th>
+        <th>Passing Year</th>
+        <th>Admission Date</th>
+    </tr>
+    {% for user in students %}
+    <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.marks }}</td>
+        <td>{{ user.city }}</td>
+        <td>{{ user.passing_year }}</td>
+        <td>{{ user.admissoon_date }}</td>
+    </tr>
+    {% endfor %}
+</table> <hr>
+{#<h3>Average Data {{ average }}</h3>#}
+{#<h3>Average Data {{ average.marks__avg }}</h3><hr>#}
+{#<h3>Max Data {{ max }}</h3>#}
+{#<h3>Max Data {{ max.marks__avg }}</h3>#}
+</body>
+</html>
