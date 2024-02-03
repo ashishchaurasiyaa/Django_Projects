@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Model Manager</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        td,th,h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <h3>Student Information</h3>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Role</th>
+    {% for student in students %}
+        <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.role }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
