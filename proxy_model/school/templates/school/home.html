@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proxy Model</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        table#t01 th {
+            background-color: black;
+            color: white;
+        }
+        h3 {
+            text-align: center;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+        th{
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+        }
+        td{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <h3>Exam Center Information - Original</h3>
+    <th>Id</th>
+    <th>Exam Center</th>
+    <th>Center City</th>
+    {% for center in centers %}
+        <tr>
+            <td>{{ center.id }}</td>
+            <td>{{ center.cname }}</td>
+            <td>{{ center.city }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<table>
+    <h3>Exam Center Information - Local</h3>
+    <th>Id</th>
+    <th>My Exam Center Name</th>
+    <th>Center City</th>
+    {% for mycenter in mycenters %}
+        <tr>
+            <td>{{ mycenter.id }}</td>
+            <td>{{ mycenter.cname }}</td>
+            <td>{{ mycenter.city }}</td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
