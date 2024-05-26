@@ -1,0 +1,33 @@
+<footer>
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>About Us</h3>
+            <p>Our mission is to provide high-quality services to our customers. We have a diverse team of professionals dedicated to excellence.</p>
+        </div>
+        <div class="footer-nav">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Email: info@example.com</p>
+            <p>Phone: (123) 456-7890</p>
+        </div>
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#"><img src="{% static 'icons/facebook.svg' %}" alt="Facebook"></a></li>
+                <li><a href="#"><img src="{% static 'icons/twitter.svg' %}" alt="Twitter"></a></li>
+                <li><a href="#"><img src="{% static 'icons/linkedin.svg' %}" alt="LinkedIn"></a></li>
+                <li><a href="#"><img src="{% static 'icons/instagram.svg' %}" alt="Instagram"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </div>
+</footer>
